@@ -10,8 +10,8 @@ import (
 )
 
 func RegisterCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&MsgSetCanonicalClient{}, "lightclient/SetCanonicalClient", nil)
-	//cdc.RegisterConcrete(&MsgSetCanonicalClient{}, "/dym.lightclient.MsgSetCanonicalClient", nil)
+	//cdc.RegisterConcrete(&MsgSetCanonicalClient{}, "lightclient/SetCanonicalClient", nil)
+	cdc.RegisterConcrete(&MsgSetCanonicalClient{}, "/dym.lightclient.MsgSetCanonicalClient", nil)
 }
 
 func RegisterInterfaces(registry codectypes.InterfaceRegistry) {
